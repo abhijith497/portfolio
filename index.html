@@ -107,24 +107,24 @@
    <section id="contact">
     <h2>Contact Me</h2>
 
-    <form action="#success" method="post">
+   <form action="#success">
 
-        <label>Name</label>
-        <input type="text" required placeholder="Enter your name">
+    <label>Name</label>
+    <input type="text" required minlength="3" placeholder="Enter your name">
 
-        <label>Email</label>
-        <input type="email" required placeholder="Enter your email">
+    <label>Email</label>
+    <input type="email" required placeholder="Enter your email">
 
-        <label>Message</label>
-        <textarea required placeholder="Enter your message"></textarea>
+    <label>Message</label>
+    <textarea required minlength="10" placeholder="Enter your message"></textarea>
 
-        <button type="submit">Send Message</button>
-    </form>
+    <button type="submit">Send Message</button>
+</form>
 
 </section>
 
 <section id="success" class="success-message">
-    Submitted successfully! <br>
+    ✅ Submitted successfully! <br>
     We will respond soon.
 </section>
 
