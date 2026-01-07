@@ -1,6 +1,6 @@
 
 
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +8,14 @@
 }
 
 
-
 body {
-    background-color: #f4f6f8;   
+    background-color: #f4f6f8;
     color: #333333;
 }
 
 
 header {
-    background-color: #0a66c2;    
+    background-color: #0a66c2;
     color: white;
     text-align: center;
     padding: 25px;
@@ -29,38 +28,11 @@ header img {
 
 
 
-h1 {
-    font-size: 32px;
-}
-
-h2 {
-    color: #0a66c2;
-    margin-bottom: 10px;
-}
-
-h3, h4, h5, h6 {
-    color: #444;
-}
-
-
-
-p {
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-span {
-    color: #0a66c2;
-    font-weight: bold;
-}
-
-
-
 nav {
     background-color: #ffffff;
     text-align: center;
     padding: 12px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dddddd;
 }
 
 nav a {
@@ -72,28 +44,38 @@ nav a {
 }
 
 nav a:hover {
-    color: #004182;
     text-decoration: underline;
 }
 
 
 
 section {
-    background-color: white;
+    background-color: #ffffff;
+    max-width: 1000px;
     margin: 25px auto;
     padding: 25px;
-    max-width: 1000px;
     border-radius: 8px;
 }
 
-div {
-    margin-bottom: 15px;
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    color: #0a66c2;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 
 
 img {
-    max-width: 50%;
+    max-width: 100%;
     display: block;
     margin: 15px auto;
 }
@@ -111,46 +93,20 @@ li {
 
 
 button,
-input[type="submit"],
-input[type="button"] {
+.btn {
     background-color: #0a66c2;
     color: white;
-    border: none;
     padding: 10px 22px;
-    font-size: 15px;
-    cursor: pointer;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
 button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
+.btn:hover {
     background-color: #004182;
-}
-
-
-
-form {
-    margin-top: 15px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-}
-
-textarea {
-    resize: none;
 }
 
 
@@ -173,32 +129,53 @@ td {
 }
 
 
-hr {
-    border: none;
-    height: 2px;
-    background-color: #0a66c2;
-    margin: 20px 0;
-}
-.resume-buttons {
-    text-align: center;
-    margin-top: 15px;
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
 }
 
-.resume-buttons .btn {
-    display: inline-block;
-    background-color: #0a66c2;
-    color: white;
-    padding: 10px 20px;
-    margin: 8px;
-    text-decoration: none;
-    font-weight: bold;
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
     border-radius: 5px;
 }
 
-.resume-buttons .btn:hover {
-    background-color: #004182;
+textarea {
+    resize: none;
+    height: 100px;
 }
 
+/* Focus state */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0a66c2;
+}
+
+
+
+.success-message {
+    display: none;
+    background-color: #e6f4ea;
+    color: #1e7e34;
+    font-weight: bold;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 1000px;
+    border-left: 6px solid #28a745;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+#success:target {
+    display: block;
+}
 
 
 
@@ -223,16 +200,6 @@ footer {
 
 
 
-a {
-    color: #0a66c2;
-}
-
-a:hover {
-    color: #004182;
-}
-
-
-
 @media (max-width: 600px) {
 
     nav a {
@@ -242,29 +209,6 @@ a:hover {
 
     section {
         margin: 15px;
-        padding: 20px;
+        padding-right: 30px; 
     }
-}
-
-
-.social-icons {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 8px;
-}
-
-.social-icons img {
-    width: 40px;         
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-
-.social-icons img:hover {
-    transform: scale(1.2);
 }
